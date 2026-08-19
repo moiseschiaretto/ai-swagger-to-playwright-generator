@@ -1,0 +1,13 @@
+{
+  "name": "ai-swagger-to-playwright-generator",
+  "version": "1.0.0",
+  "description": "Gera uma suíte de testes de contrato Playwright a partir de qualquer especificação Swagger/OpenAPI",
+  "main": "generate.js",
+  "scripts": {
+    "generate": "node generate.js"
+  },
+  "dependencies": {
+    "@google/genai": "^0.4.0",
+    "node-fetch": "^2.7.0"
+  }
+}

@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-generator:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências da target_api
+        working-directory: target_api
+        run: npm install
+
+      - name: Subir target_api em background
+        working-directory: target_api
+        run: nohup node server.js &
+
+      - name: Smoke test do endpoint Swagger
+        run: |
+          sleep 2
+          curl -sf http://localhost:3000/api-docs.json > /dev/null && echo "Swagger spec OK"
+
+      - name: Instalar dependências do gerador
+        working-directory: generator
+        run: npm install
+
+      - name: Validar sintaxe do gerador
+        working-directory: generator
+        run: |
+          node -c generate.js
+          node -c llm_client.js
+          node -c fetch_swagger.js
+          node -c prompt_registry/registry.js
+          node -c mcp_integration/github_pr.js
+
+      - name: Nota sobre geração completa
+        run: echo "Geração completa da suíte requer GEMINI_API_KEY configurada como secret do repositório."
