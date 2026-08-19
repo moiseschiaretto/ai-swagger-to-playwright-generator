@@ -121,6 +121,12 @@ ai-swagger-to-playwright-generator/
 └── .github/workflows/ci.yml     Valida o gerador e a target_api a cada push
 ```
 
+### Mapa mental do projeto
+
+Visão consolidada do fluxo: as três entradas (URL do Swagger, Skill, LLM) convergem em `generate.js`, que orquestra a geração e produz três saídas — auditoria (Prompt Registry), revisão via Pull Request (MCP) e a suíte de testes em si, que a partir daí roda de forma totalmente independente de IA.
+
+<img src="docs/screenshots/12-mapa-mental-projeto.png" alt="Mapa mental do projeto ai-swagger-to-playwright-generator" width="850">
+
 ## Escala de demonstração
 
 A `target_api` cobre 6 recursos (`users`, `products`, `orders`, `categories`, `reviews`, `auth`), múltiplos verbos e status por endpoint — gera cerca de **48-51 cenários de teste**, testados e confirmados **48/48 passando**.
