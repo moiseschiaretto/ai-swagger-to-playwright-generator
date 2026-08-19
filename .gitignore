@@ -1,12 +1,16 @@
-# Node
-node_modules/
+**/node_modules/
 
-# Prompt Registry (dado local, não versionar)
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+
 generator/prompt_registry/prompt_registry.jsonl
 
-# Suítes geradas (são o produto final, cada usuário gera as suas)
-generated-suite/
-generated-suite-*/
-
-# Ambiente
 .env
+**/.env
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

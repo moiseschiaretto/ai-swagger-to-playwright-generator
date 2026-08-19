@@ -1,0 +1,29 @@
+{
+  "name": "playwright-public-api-contract-tests",
+  "version": "1.0.0",
+  "description": "Suíte de testes de contrato utilizando Playwright e especificações OpenAPI/Swagger",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "api",
+    "contract-testing",
+    "swagger",
+    "openapi"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.0",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "zod": "^4.4.3"
+  }
+}

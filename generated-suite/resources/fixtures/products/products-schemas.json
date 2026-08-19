@@ -1,0 +1,141 @@
+{
+  "get_products_200": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price",
+        "categoryId"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "number"
+        },
+        "categoryId": {
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "post_products_201": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "price",
+      "categoryId"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "categoryId": {
+        "type": "integer"
+      }
+    }
+  },
+  "post_products_400": {
+    "type": "object",
+    "required": [
+      "error"
+    ],
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  },
+  "get_product_by_id_200": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "price",
+      "categoryId"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "categoryId": {
+        "type": "integer"
+      }
+    }
+  },
+  "get_product_by_id_404": {
+    "type": "object",
+    "required": [
+      "error"
+    ],
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  },
+  "put_products_200": {
+    "type": "object",
+    "required": [
+      "id",
+      "name",
+      "price",
+      "categoryId"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "name": {
+        "type": "string"
+      },
+      "price": {
+        "type": "number"
+      },
+      "categoryId": {
+        "type": "integer"
+      }
+    }
+  },
+  "put_products_404": {
+    "type": "object",
+    "required": [
+      "error"
+    ],
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  },
+  "delete_products_404": {
+    "type": "object",
+    "required": [
+      "error"
+    ],
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  }
+}

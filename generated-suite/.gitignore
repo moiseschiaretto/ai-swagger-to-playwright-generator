@@ -1,0 +1,21 @@
+# Dependências (em qualquer subpasta: target_api/, generator/, generated-suite/)
+**/node_modules/
+
+# Relatórios e artefatos do Playwright (gerados a cada execução, não versionar)
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+
+# Prompt Registry (dado local de auditoria, não versionar)
+generator/prompt_registry/prompt_registry.jsonl
+
+# Variáveis de ambiente locais (contém chaves/segredos)
+.env
+**/.env
+
+# Logs do sistema operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

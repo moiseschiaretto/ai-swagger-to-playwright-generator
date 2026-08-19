@@ -1,0 +1,107 @@
+{
+  "get_200": {
+    "type": "array",
+    "items": {
+      "type": "object",
+      "required": [
+        "id",
+        "productId",
+        "userId",
+        "rating"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "productId": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "rating": {
+          "type": "integer"
+        },
+        "comment": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "post_201": {
+    "type": "object",
+    "required": [
+      "id",
+      "productId",
+      "userId",
+      "rating"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "productId": {
+        "type": "integer"
+      },
+      "userId": {
+        "type": "integer"
+      },
+      "rating": {
+        "type": "integer"
+      },
+      "comment": {
+        "type": "string"
+      }
+    }
+  },
+  "post_400": {
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  },
+  "get_by_id_200": {
+    "type": "object",
+    "required": [
+      "id",
+      "productId",
+      "userId",
+      "rating"
+    ],
+    "properties": {
+      "id": {
+        "type": "integer"
+      },
+      "productId": {
+        "type": "integer"
+      },
+      "userId": {
+        "type": "integer"
+      },
+      "rating": {
+        "type": "integer"
+      },
+      "comment": {
+        "type": "string"
+      }
+    }
+  },
+  "get_by_id_404": {
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  },
+  "delete_404": {
+    "type": "object",
+    "properties": {
+      "error": {
+        "type": "string"
+      }
+    }
+  }
+}
